@@ -1,10 +1,28 @@
+import java.util.Scanner;
+
 public class BasicCode {
     public static void main(String[] args) {
+        getXing();
         multiplyTable();
     }
 
+    // 输出"*"
+    public static void getXing() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入行数");
+        int x = scanner.nextInt();
+        System.out.println("请输入列数");
+        int y = scanner.nextInt();
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+        }
+    }
+
     // 九九乘法表
-    static void multiplyTable() {
+    public static void multiplyTable() {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < (i + 1); j++) {
                 // \t - 制表符 - 表示点击一个tab键
