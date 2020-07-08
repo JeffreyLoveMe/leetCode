@@ -1,5 +1,8 @@
 import java.util.Scanner;
-
+// 测试类
+// 必须包含main函数
+// 类名必须与文件名一致
+// 建议一个文件只写一个类
 public class BasicCode {
     public static void main(String[] args) {
         getXing();
