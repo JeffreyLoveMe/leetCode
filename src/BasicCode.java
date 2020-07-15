@@ -41,23 +41,36 @@ public class BasicCode {
 
     // 使用'Phone类'
     public static void userClass() {
-        // 新建一个类
+        // 新建一个类（无参构造方法）
         Phone p = new Phone();
         // 给属性赋值
         p.setBrand("苹果");
         // 调用方法
         System.out.println("使用" + p.getBrand() + "手机可以" + p.call());
         p.sendMessage();
+        // 新建一个类（有参构造方法）
+        Phone p1 = new Phone("iphone", 200, "red");
+        p1.sendMessage();
     }
 }
 
 // 标准类
 class Phone {
-    // 属性需要加上private
+    // 1>.属性（成员变量）需要加上private
     private String brand;  // 品牌
     private int price;   // 价格
     private String color; // 颜色
-    // getter/setter方法
+
+    // 2>.构造方法
+    public Phone() {}
+
+    public Phone(String brand, int price, String color) {
+        this.brand = brand;
+        this.price = price;
+        this.color = color;
+    }
+
+    // 3>.getter/setter方法
     public void setBrand(String brand) {
         this.brand = brand;
     }
@@ -81,6 +94,7 @@ class Phone {
     public String getColor() {
         return color;
     }
+
     // 普通方法
     public String call() {
         System.out.println("打电话");
