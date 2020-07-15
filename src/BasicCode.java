@@ -10,6 +10,16 @@ public class BasicCode {
         userClass();
     }
 
+    // 使用递归法 - "计算base的n次方"/"计算n的阶乘"
+    public static void myPow(int base, int n) {
+        /*
+        使用递归法 - n个人坐在一起：
+        问第n个人多大，他说比第(n - 1)个人大2岁；.....问第5个人多大，他说比第4个人大2岁；
+        问第4个人多大，他说比第3个人大2岁；问第3个人多大，他说比第2个人大2岁；问第2个人多大，
+        他说比第1个人大2岁；问第1个人多大，他说10岁；请问第n个人多少岁？
+        */
+    }
+
     // 输出"*"
     public static void getXing() {
         Scanner scanner = new Scanner(System.in);
