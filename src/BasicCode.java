@@ -5,13 +5,14 @@ import java.util.Scanner;
 // 建议一个文件只写一个类
 public class BasicCode {
     public static void main(String[] args) {
-        getXing();
-        multiplyTable();
-        userClass();
+        BasicCode basicCode = new BasicCode();
+        basicCode.getXing();
+        basicCode.multiplyTable();
+        basicCode.userClass();
     }
 
     // 使用递归法 - "计算base的n次方"/"计算n的阶乘"
-    public static void myPow(int base, int n) {
+    public void myPow(int base, int n) {
         /*
         使用递归法 - n个人坐在一起：
         问第n个人多大，他说比第(n - 1)个人大2岁；.....问第5个人多大，他说比第4个人大2岁；
@@ -21,7 +22,7 @@ public class BasicCode {
     }
 
     // 输出"*"
-    public static void getXing() {
+    public void getXing() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入行数");
         int x = scanner.nextInt();
@@ -36,7 +37,7 @@ public class BasicCode {
     }
 
     // 九九乘法表
-    public static void multiplyTable() {
+    public void multiplyTable() {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < (i + 1); j++) {
                 // \t - 制表符 - 表示点击一个tab键
@@ -50,7 +51,7 @@ public class BasicCode {
     }
 
     // 使用'Phone类'
-    public static void userClass() {
+    public void userClass() {
         // 新建一个类（无参构造方法）
         Phone p = new Phone();
         // 给属性赋值
