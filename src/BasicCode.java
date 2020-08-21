@@ -63,6 +63,8 @@ public class BasicCode {
         Phone p1 = new Phone("iphone", 200, "red");
         p1.sendMessage();
     }
+
+    // 斐波那契数列
 }
 
 // 标准类
