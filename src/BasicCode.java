@@ -11,14 +11,25 @@ public class BasicCode {
         basicCode.userClass();
     }
 
-    // 使用递归法 - "计算base的n次方"/"计算n的阶乘"
-    public void myPow(int base, int n) {
+    // 使用递归法 - 计算N的阶乘
+    public int myPow(int n) {
+        // N! = N * (N - 1) * (N - 2) * ... * 2 * 1
+        // 1.必须与结束条件
+        if (n == 1) {
+            return 1;
+        }
+        // 2.必须自己调用自己
+        return n * myPow(n - 1);
         /*
         使用递归法 - n个人坐在一起：
         问第n个人多大，他说比第(n - 1)个人大2岁；.....问第5个人多大，他说比第4个人大2岁；
         问第4个人多大，他说比第3个人大2岁；问第3个人多大，他说比第2个人大2岁；问第2个人多大，
         他说比第1个人大2岁；问第1个人多大，他说10岁；请问第n个人多少岁？
         */
+//        if (n == 1) {
+//            return 10;
+//        }
+//        return myPow(n - 1) + 2;
     }
 
     // 输出"*"
@@ -63,8 +74,6 @@ public class BasicCode {
         Phone p1 = new Phone("iphone", 200, "red");
         p1.sendMessage();
     }
-
-    // 斐波那契数列
 }
 
 // 标准类
